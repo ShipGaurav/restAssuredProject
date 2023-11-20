@@ -23,6 +23,8 @@ public class partner_delivery_not_serviciable {
 		            orderIds.add(orderId);
 		        }
 		    }
+		    
+		    ///
 
 		    public static void main(String[] args) {
 
@@ -126,6 +128,8 @@ public class partner_delivery_not_serviciable {
 		                continue;
 		            }
 		            countOrderID++;
+		            
+		            ////
 		            
 		        }
 		        							
