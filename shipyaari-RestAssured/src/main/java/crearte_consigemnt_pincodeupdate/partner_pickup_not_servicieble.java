@@ -24,6 +24,7 @@ public class partner_pickup_not_servicieble {
 		            orderIds.add(orderId);
 		        }
 		    }
+		    //test
 
 		    public static void main(String[] args) {
 
