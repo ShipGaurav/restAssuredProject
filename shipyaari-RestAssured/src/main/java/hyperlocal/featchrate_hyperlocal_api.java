@@ -1,0 +1,28 @@
+package hyperlocal;
+
+import static io.restassured.RestAssured.given;
+
+import files.payload;
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+
+public class featchrate_hyperlocal_api {
+
+	public static void main(String[] args) {
+		RestAssured.baseURI="https://seller.shipyaari.com/avn_ci/siteadmin/shipment_api/fetch_rate_hyperlocal";
+		 Response response = given()
+		  //  .queryParam("avnkey", "999@5181")
+		    .header("Content-Type","text/plain")
+		    .body(payload.featch_rate_hyperlocal()).log().all()
+		.when()
+		    .post("avn_ci/siteadmin/shipment_api/fetch_rate_hyperlocal")
+		.then()
+		    .assertThat()
+		    .statusCode(200)
+		    .extract().response();
+	     String jsonResponse = response.asString();
+	     System.out.println("Response");
+	     System.out.println(jsonResponse);
+	}
+	
+}

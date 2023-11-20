@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="3.714" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Client Login" name="Login with valid credentials" time="3.552">
+<system-out><![CDATA[
+Given I set user API EndPoint to "https://seller.shipyaari.com/angularapi/login".passed
+And I set request body as:..................................................passed
+When I send POST request....................................................passed
+Then the response status code should be 200.................................passed
+And the response body should contain "Login Successfully!"..................passed
+And the response body should have property "result.user_id" with value "5934".passed
+And the response body should have property "result.full_name" with value "Demo-Tech".passed
+And the response body should have property "result.email" with value "gaurav.jadhav@shipyaari.com".passed
+And the response body should have property "result.mobile" with value "7020553391".passed
+]]></system-out>
+</testcase>
+</testsuite>
